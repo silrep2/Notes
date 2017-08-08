@@ -13,8 +13,8 @@ adb  push  ~/android-ndk-r10e/prebuilt/android-arm64/gdbserver/gdbserver  /sdcar
 **Set arm-gdb as environment var**
 
 ```bash
-export armv8-gdb=~/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gdb
-echo "export armv8-gdb=~/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gdb" >> ~/.profile
+export armv8_gdb=~/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gdb
+echo "export armv8_gdb=~/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gdb" >> ~/.profile
 ```
 
 ## If Phone conntected by USB
@@ -32,7 +32,7 @@ adb shell
 
 ```bash
 adb  forward tcp:1234  tcp:1234
-$armv8-gdb /exe/path/on/pc
+$armv8_gdb /exe/path/on/pc
 target remote localhost:1234
 ```
 
@@ -49,7 +49,7 @@ You can use `ping` command to test if they are connected.
 **Terminal on PC**
 
 ```bash
-$armv8-gdb /exe/path/on/pc
+$armv8_gdb /exe/path/on/pc
 target remote 192.168.0.phone:1234
 ```
 
