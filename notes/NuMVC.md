@@ -10,7 +10,7 @@
  
 改变一个v的状态后的cost差
 
-等于 `新的cost - 旧的cost`
+等于 `旧的cost - 新的cost`
 
 dscore > 0  往好的方向发展
 
